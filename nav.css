@@ -1,0 +1,354 @@
+/* Navbar */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:20px;
+}
+
+.menu{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+.menu li a{
+    color:white;
+    text-decoration:none;
+    padding:10px 15px;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.menu li a:hover{
+    background:white;
+    color:#0d6efd;
+}
+
+.menu-btn{
+    display:none;
+    font-size:30px;
+    cursor:pointer;
+}
+
+/* Hero Section */
+
+.hero{
+    text-align:center;
+    padding:120px 20px;
+    color:white;
+    background:
+    linear-gradient(rgba(0,0,0,0.6),
+    rgba(0,0,0,0.6)),
+    url("background.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+.hero button{
+    padding:15px 30px;
+    border:none;
+    border-radius:30px;
+    background:#00c3ff;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero button:hover{
+    transform:scale(1.1);
+}
+/* Header Animation */
+header{
+    animation:slideDown 1s ease;
+}
+
+
+/* Hero Text Animation */
+
+.hero h1{
+    animation:fadeLeft 1.2s ease;
+}
+
+.hero p{
+    animation:fadeRight 1.5s ease;
+}
+
+.hero button{
+    animation:zoomIn 2s ease;
+}
+/* Courses */
+
+.courses{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    padding:60px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    transition:0.4s;
+    position:relative;
+    overflow:hidden;
+}
+
+/* Animated Top Border */
+
+.card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:5px;
+    background:linear-gradient(90deg,#00c3ff,#0d6efd);
+    transition:0.5s;
+}
+
+.card:hover::before{
+    left:0;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.card h3{
+    color:#0d6efd;
+    margin-bottom:15px;
+}
+
+/* Course Logo Animation */
+
+.card h3::before{
+    content:"🎓 ";
+    display:inline-block;
+    animation:bounce 1s infinite;
+}
+
+@keyframes bounce{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-8px);
+    }
+}
+
+/* Logo Animation */
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    animation:rotateLogo 5s linear infinite;
+}
+/* Footer */
+
+footer{
+    background:#084298;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.navbar{
+    flex-direction:column;
+}
+
+.menu{
+    flex-direction:column;
+    text-align:center;
+    margin-top:15px;
+}
+
+.hero h1{
+    font-size:35px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.courses{
+    padding:20px;
+}
+
+}
+/* Common Animations */
+
+@keyframes fadeLeft{
+
+    from{
+        opacity:0;
+        transform:translateX(-80px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+@keyframes fadeRight{
+
+    from{
+        opacity:0;
+        transform:translateX(80px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+
+/* Smooth Scrolling */
+
+section{
+
+    animation:fadeUp 1s ease;
+
+}
+
+/* Beautiful Background */
+
+body{
+
+    background:linear-gradient(135deg,#eef4ff,#f7fbff,#eef6ff);
+
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f7fb;
+    color:#333;
+    overflow-x:hidden;
+}
+
+/* Header */
+
+header{
+    background:linear-gradient(135deg,#0d6efd,#001f5c);
+    color:#fff;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.title{
+    text-align:center;
+    font-size:42px;
+    padding:25px 0;
+    letter-spacing:2px;
+}
+
+/* Navbar */
+
+.navbar{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#fff;
+}
+
+.menu{
+    display:flex;
+    list-style:none;
+}
+
+.menu li{
+    position:relative;
+}
+
+.menu li a{
+    color:#fff;
+    text-decoration:none;
+    padding:15px 18px;
+    display:block;
+    transition:.3s;
+    font-weight:500;
+}
+
+.menu li a:hover{
+    color:#0b58cc;
+}
+
+/* Dropdown */
+
+.dropdown-menu{
+    position:absolute;
+    top:55px;
+    left:0;
+    width:230px;
+    background:#fff;
+    list-style:none;
+    border-radius:8px;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    display:none;
+    overflow:hidden;
+}
+
+.dropdown:hover .dropdown-menu{
+    display:block;
+    animation:dropdown .3s ease;
+}
+
+.dropdown-menu li a{
+    color:#333;
+    padding:14px 18px;
+}
+
+.dropdown-menu li a:hover{
+    background:#0d6efd;
+    color:#fff;
+}
+
+@keyframes dropdown{
+
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}

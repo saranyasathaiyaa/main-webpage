@@ -1,0 +1,177 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+    font-family:'Poppins',sans-serif;
+
+    display:flex;
+    flex-direction:column; /* முக்கியம் */
+}
+/* Contact Section */
+.contact-page{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+}
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:20px;
+    width:100%;
+}
+
+/* Professional Glass Card */
+.contact-card{
+    width:100%;
+    max-width:750px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,0.25);
+    border-radius:25px;
+    padding:40px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.3);
+    transition:0.4s ease;
+}
+
+.contact-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* Heading */
+.contact-card h1{
+    text-align:center;
+    color:#fff;
+    font-size:42px;
+    margin-bottom:10px;
+    font-weight:700;
+}
+
+.subtitle{
+    text-align:center;
+    color:#e5e7eb;
+    font-size:16px;
+    margin-bottom:35px;
+}
+
+/* Contact Info Cards */
+.info-box{
+    background:rgba(255,255,255,0.15);
+    border-left:5px solid #60a5fa;
+    padding:18px;
+    border-radius:12px;
+    margin-bottom:15px;
+    transition:0.3s;
+}
+
+.info-box:hover{
+    transform:translateX(5px);
+    background:rgba(255,255,255,0.22);
+}
+
+.info-box h3{
+    color:#fff;
+    margin-bottom:6px;
+    font-size:18px;
+}
+
+.info-box p{
+    color:#f8fafc;
+    font-size:15px;
+}
+
+/* Form */
+form{
+    margin-top:30px;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+/* Input Fields */
+input,
+textarea{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:rgba(255,255,255,0.18);
+    color:#fff;
+    font-size:15px;
+    outline:none;
+    transition:0.3s;
+}
+
+input:focus,
+textarea:focus{
+    background:rgba(255,255,255,0.25);
+    box-shadow:0 0 10px rgba(96,165,250,0.6);
+}
+
+input::placeholder,
+textarea::placeholder{
+    color:#dbeafe;
+}
+
+textarea{
+    height:140px;
+    resize:none;
+}
+
+/* Professional Button */
+button{
+    background:linear-gradient(135deg,#2563eb,#3b82f6);
+    color:#fff;
+    border:none;
+    padding:15px;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:17px;
+    font-weight:600;
+    transition:0.3s ease;
+}
+
+button:hover{
+    transform:translateY(-3px);
+    background:linear-gradient(135deg,#1d4ed8,#2563eb);
+    box-shadow:0 8px 20px rgba(37,99,235,0.4);
+}
+
+/* Footer */
+footer{
+    background:#3998d8;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+    border-radius:10px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    .contact-card{
+        padding:25px;
+    }
+
+    .contact-card h1{
+        font-size:32px;
+    }
+
+    .subtitle{
+        font-size:14px;
+    }
+}

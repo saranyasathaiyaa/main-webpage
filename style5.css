@@ -1,0 +1,176 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+/* Background Video */
+.background-video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+/* Hero Section */
+.hero{
+    height:60vh;
+    background:url("placement-bg.jpg") center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.overlay{
+    background:rgba(0,0,0,0.6);
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    color:white;
+}
+
+.overlay h1{
+    font-size:50px;
+}
+
+.overlay p{
+    margin-top:10px;
+    font-size:18px;
+}
+
+/* Common Section */
+section{
+    padding:60px 8%;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#1e3a8a;
+}
+
+/* Statistics */
+.stats-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.stat-card{
+    width:250px;
+    background:white;
+    padding:30px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.stat-card:hover{
+    transform:translateY(-8px);
+}
+
+.stat-card h3{
+    color:#2563eb;
+    font-size:35px;
+}
+
+/* Companies */
+.company-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.company-card{
+    width:180px;
+    padding:25px;
+    text-align:center;
+    background:#1e3a8a;
+    color:white;
+    border-radius:12px;
+    font-size:20px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.company-card:hover{
+    background:#2563eb;
+}
+
+/* Technology Updates */
+.update-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+}
+
+.update-card{
+    width:320px;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.update-card h3{
+    color:#1e3a8a;
+    margin-bottom:10px;
+}
+
+/* Table */
+.table-section{
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+table th{
+    background:#1e3a8a;
+    color:white;
+    padding:15px;
+}
+
+table td{
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+
+table tr:hover{
+    background:#f1f5f9;
+}
+footer{
+    background:#084298;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    .overlay h1{
+        font-size:35px;
+    }
+
+    .stat-card,
+    .update-card,
+    .company-card{
+        width:100%;
+    }
+}
